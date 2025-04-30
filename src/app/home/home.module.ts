@@ -6,6 +6,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 import { ProductsComponent } from './components/products/products.component';
+import { SharedModule } from '../shared/shared.module';
+import {HttpClientModule} from '@angular/common/http';
+import { CategoryService } from './services/category/category.service';
+import { CategoriesStoreItem } from './services/category/categories.storeItem';
+import { ProductsStoreItem } from './services/product/products.storeItem';
+import { ProductsService } from './services/product/products.service';
 
 
 
@@ -19,7 +25,10 @@ import { ProductsComponent } from './components/products/products.component';
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule
-  ]
+    FontAwesomeModule,
+    SharedModule,
+    HttpClientModule
+  ],
+  providers:[CategoryService,CategoriesStoreItem, ProductsService,ProductsStoreItem]
 })
 export class HomeModule { }
