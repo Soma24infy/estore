@@ -20,4 +20,8 @@ export class ProductsStoreItem extends StoreItem<Product[]>{
         return this.value$;
     }
 
+    get products():Product[]{
+        return this.value;
+    }
+
 }
