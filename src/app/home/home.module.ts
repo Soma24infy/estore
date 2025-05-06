@@ -18,6 +18,8 @@ import { ProductGalleryComponent } from './components/product-gallery/product-ga
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 import { CartStoreItem } from './services/cart/cart.storeItem';
 import { CartComponent } from './components/cart/cart.component';
+import { UserSignupComponent } from './components/users/user-signup/user-signup.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -30,7 +32,8 @@ import { CartComponent } from './components/cart/cart.component';
     ProductsComponent,
     ProductGalleryComponent,
     ProductdetailsComponent,
-    CartComponent
+    CartComponent,
+    UserSignupComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +41,8 @@ import { CartComponent } from './components/cart/cart.component';
     SharedModule,
     HttpClientModule,
     RouterModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ReactiveFormsModule
   ],
   providers:[CategoryService,
     CategoriesStoreItem, 
